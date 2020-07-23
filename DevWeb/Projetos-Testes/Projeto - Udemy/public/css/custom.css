@@ -1,0 +1,24 @@
+.nav-item:hover{
+    background-color: #223033;
+}
+
+#aboutTitle{
+    text-align: center;
+}
+
+.card-horizontal{
+    display: inline;
+}
+
+.container-fluid{
+    text-align: center;
+}
+#authorCard{
+    margin-top:20px;
+    align-items: center;
+}
+
+#authorPic{
+    padding-top: 30px;
+    padding-left: 10px;
+}

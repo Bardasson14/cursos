@@ -1,0 +1,52 @@
+Introdução à biometria com deep learning
+Prof. Dr. Eduardo Ribeiro
+
+Biometria
+  -> Métricas relacionadas à vida (Identificação e controle de acesso)
+
+Níveis de Sistemas de Segurança
+  -> Baixo: Cartão de identificação com foto
+  -> Intermediário: Senha/PIN/Cartão	
+  -> Avançado: Tecnologia Biométrica
+	REQUISITOS PARA SISTEMAS BIOMÉTRICOS:
+	+ Singulares
+	+ Universais
+	+ Medidos com instrumentos simples
+	+ Fáceis e confortáveis de serem medidas
+
+Tipos de Biometria
+
+-> FISIOLÓGICA
+	* Face
+	* Impressão digital
+	* Mão
+	* íris
+	* DNA
+-> COMPORTAMENTAL
+	* Impressão Digital -> PODE SER MODIFICADA AO LONGO DO TEMPO
+	* Assinatura
+	* Voz
+
+Reconhecimento de íris
+AQUISIÇÃO: Câmera de vídeos com luz infravermelha
+PROCEDIMENTOS
+1)ENROLLMENT: Biometric Sensor -> Feature Extraction -> Database
+2)AUTHENTICATION: Biometric Sensor -> Feature Extraction -> Matching
+
+Reconhecimento de faces
+PROCEDIMENTO
+1 - Captura de imagem e localização de medidas e pontos importantes da face
+2 - Um registro na forma de um mapa numérico da face é transferido a um banco de dados
+3 - Um programa compara o registro da face com o do banco de daddos. Existindo correspondência, o sistema calcula a probabilidade de semelhança
+
+
+Redes Neurais Convolucionais de Aprendizado Profundo
+Marco: Advento das GPUs
+Uso de algoritmos de preprocessamento para extração de características - Redes Neurais Convencionais 
+(- Mal da dimensionalidade)
+Convolução - Geração de uma nova imagem por meio de filtros
+Redes Convolucionais - Utilização de camadas de filtros para gerar vetor de características a ser aplicado na rede neural
+
+Super-Resolução com Deep Learning
+PROCEDIMENTO
+Low-Res inputs -> Machine Learning -> Hi-Res output
