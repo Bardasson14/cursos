@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Desafio Menu</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald"
+      rel="stylesheet"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0px;
+      }
+
+      .cabecalho {
+        background-color: black;
+        border-bottom: 5px solid cyan;
+        box-sizing: content-box;
+        display: flex;
+        width: 100vw;
+        text-align: center;
+      }
+
+      .logo {
+        width: 40vw;
+      }
+
+      .logo img {
+        width: 100%;
+        padding: 20px;
+      }
+
+      .menu,
+      .autenticacao {
+        display: none;
+      }
+
+      .menu li a {
+        text-decoration: none;
+        padding: 15px;
+      }
+
+      .menu li {
+        align-self: center;
+        padding: 20px;
+      }
+
+      .menu li a,
+      .autenticacao a {
+        color: white;
+        text-decoration: none;
+      }
+
+      .menu a:hover,
+      .menu a.selected {
+        background-color: cyan;
+        color: black;
+      }
+
+      .botao {
+        border-radius: 30px;
+        height: 60%;
+      }
+
+      .destaque {
+        background-color: red;
+        color: white;
+      }
+
+      .menu-toggle {
+        background-color: black;
+        color: white;
+        border: 1px solid white;
+        border-radius: 15%;
+        margin-left: auto;
+        margin-right: 10px;
+        align-self: center;
+        padding: 10px;
+        display: inline-flex;
+      }
+
+      @media (min-width: 800px) {
+        .menu {
+          display: flex;
+        }
+
+        .menu ul {
+          list-style-type: none;
+        }
+
+        .menu ul,
+        .autenticacao {
+          display: inline-flex;
+          height: 100%;
+        }
+
+        .autenticacao {
+          margin-left: auto;
+          margin-right: 20px;
+          margin-top: auto;
+          margin-bottom: auto;
+        }
+
+        .autenticacao a {
+          padding: 20px;
+          align-self: center;
+          text-decoration: none;
+        }
+
+        .menu-toggle {
+          display: none;
+        }
+
+        .logo {
+          width: 25vw;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="cabecalho">
+      <div class="logo">
+        <a href="#inicio">
+          <img src="http://files.cod3r.com.br/curso-web/logo.png" alt="Logo" />
+        </a>
+      </div>
+      <button class="menu-toggle">
+        <i class="fa fa-lg fa-bars"></i>
+      </button>
+      <nav class="menu">
+        <ul>
+          <li>
+            <a href="#inicio">Início</a>
+          </li>
+          <li>
+            <a href="#cursos">Cursos</a>
+          </li>
+          <li>
+            <a href="#sobre">Sobre</a>
+          </li>
+          <li>
+            <a href="#contato">Contato</a>
+          </li>
+        </ul>
+      </nav>
+      <aside class="autenticacao">
+        <a href="#login">Login</a>
+        <a href="#registar" class="botao destaque">Registrar</a>
+      </aside>
+    </header>
+
+    <script>
+      window.onhashchange = function (e) {
+        const oldURL = e.oldURL.split("#")[1];
+        const newURL = e.newURL.split("#")[1];
+        const oldLink = document.querySelector(`.menu [href='#${oldURL}']`);
+        const newLink = document.querySelector(`.menu [href='#${newURL}']`);
+        oldLink && oldLink.classList.remove("selected");
+        newLink && newLink.classList.add("selected");
+      };
+    </script>
+  </body>
+</html>
