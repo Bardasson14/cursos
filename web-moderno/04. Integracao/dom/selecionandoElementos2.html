@@ -10,7 +10,11 @@
     <div>Segundo</div>
     <div class="terceiro ultimo"><span wb-attrib>.terceiro .ultimo</span></div>
     <script>              
-        // ...
+        const addClass = (selector, addedClass) => document.querySelectorAll(selector).forEach(s => s.classList.add(addedClass))
+        //querySelectorAll -> retorna NodeList de elementos correspondentes,
+        const rmClass = (selector, rmvdClass) => document.querySelectorAll(selector).forEach(s => s.classList.remove(rmvdClass))
+        addClass(':nth-child(3)', 'destaque')
+        //wb-attrib -> atributo personalizado
     </script>
 </body>
 </html>

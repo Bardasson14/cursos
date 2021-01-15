@@ -22,7 +22,27 @@
         <p>Fim</p>
     </div>
     <script>
-        // ...
+        
+        function log () {
+            console.log(this)
+        }
+
+        HTMLCollection.prototype.log = log
+        HTMLElement.prototype.log = log
+        NodeList.prototype.log = log
+        Node.prototype.log = log
+
+        const list_ = document.querySelector('div ul')
+        list_.parentNode.log()
+        list_.childNodes.log() //leva junto os espaços entre as tags
+
+        const fst = list_.firstChild
+        fst.log()
+        fst.nextSibling.log()
+
+        list_.children.log()
+        list_.lastChild.log()
+        list_.lastElementChild.log()
     </script>
 </body>
 
