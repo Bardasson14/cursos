@@ -17,16 +17,29 @@
             color: #fff;
             border-bottom: solid 5px #4faddb;
             height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+
+        .logo {
+            display: inline-flex;
         }
         
         .logo img {
             height: 50px;
         }
+
+        .menu {
+            flex-grow: 10;
+        }
         
         .menu ul {
+            display: inline-flex;
             list-style: none;
             margin: 0;
-            padding: 0;
+            padding: 20px;
         }
         
         .cabecalho a {
@@ -51,9 +64,20 @@
             background: #f50a31;
             color: #fff;
         }
+
+        .autenticacao {
+            display: flex; 
+            
+            justify-content: flex-end;
+            align-items: center;
+        }
+        
         /* ==================== */
         /* Solução com Flex Box */
         /* ==================== */
+
+
+
     </style>
 </head>
 
