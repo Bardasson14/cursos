@@ -10,14 +10,30 @@
 <body class='conteudo exercicio'>
     <div>
         <label for="compras">Compras</label>
-        <ul id="compras" destino='escritório' data-urgencia="5">
+        <ul id="compras" destino='escritorio' data-urgencia="5">
             <li>Café</li>
             <li>Água</li>
             <li>Copo Descartável</li>
         </ul>
     </div>
     <script>
-        // ...
+        const list_ = document.querySelector ('div ul[destino="escritorio"]')
+        console.log("Elemento ul")
+        console.log("childNodes", list_.childNodes)
+        console.log('destino', list_.destino) //undefined
+        console.log(list_.getAttribute('destino'))//escritorio
+        console.log('hasAttribute', list_.hasAttribute('destino'))
+        list_.setAttribute('destino', 'empresa')
+        list_.setAttribute('status', 'aberto') //cria um novo atributo
+        list_.removeAttribute('destino')
+
+        //atributos personalizados: data-attr
+
+        console.log(list_.dataset) //retorna atributos personalizados que começam com "data-"
+
+        list_.dataset.urgencia = 3 //não é necessário usar o prefixo "data-"
+
+        console.log(list_.dataset)
     </script>
 </body>
 
